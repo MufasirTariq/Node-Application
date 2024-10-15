@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.datatables.net/v/bs4/dt-2.1.2/datatables.min.css" rel="stylesheet">
+    <title>NodeApp- Signup</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class = "container">
+            <a href="/" class="navbar-brand"><i class="fas fa-code me-2"></i>NodeApplication</a>
+            <button class="navbar-toggler" data-bs-target="#my-nav"
+            data-bs-toggle="collapse" aria-controls="my-nav" aria-expanded="false"
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <u1 class = "navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/"><i class = "fas fa-home me-i"></i>Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/register"><i class="fas fa-user-plus me-1"></i>Sign up</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fas fa-globe me-1"></i>About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fas fa-envelope me-1"></i>Contact</a>
+                    </li>
+                </u1>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto mt-4">
+                <div class="card shadow">
+                    <div class="card-header bg-dark">
+                        <h5 class="text-light d-flex justify-content-center">Sign Up to Our Application</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="/register" method="POST" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="image" class="form-label">Select Image</label>
+                                <input type="file" name="image" class="form-control form-control-lg" required/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter Name" required/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter Email" required/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password">Password</label>
+                                <input type="text" name="password" class="form-control form-control-lg" placeholder="Enter Password" required/>
+                            </div>
+                            <div class="mb-3 d-flex justify-content-center">
+                                <input type="submit" name="submit" value="Sign UP" class="btn btn-dark" />
+                            </div>
+                            <% if (typeof msg !== 'undefined' && msg) { %>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <strong><%= msg %></strong> 
+                                </div>
+                            <% } else { %>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <a href="/">Already have an Account ?</a>
+                                </div>
+                            <% } %>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
